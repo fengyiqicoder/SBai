@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>傻逼模拟器</title>
+    <meta
+      name="description"
+      content="傻逼模拟器"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <h1>傻逼模拟器</h1>
+    </header>
+
+    <main class="layout">
+      <section class="panel personas">
+        <div class="panel-header">
+          <h2>选择角色</h2>
+        </div>
+        <div id="persona-list" class="persona-list" aria-label="角色列表"></div>
+      </section>
+
+      <section class="panel chat">
+        <div class="panel-header chat-header">
+          <div>
+            <h2 id="chat-title">请选择一个傻逼</h2>
+            <p id="chat-desc"></p>
+          </div>
+          <div class="chat-actions">
+            <button id="reset-chat" class="ghost-btn" type="button">
+              清空
+            </button>
+          </div>
+        </div>
+
+        <div id="chat-messages" class="chat-messages" aria-live="polite"></div>
+
+        <div class="quick-replies">
+          <div id="quick-buttons" class="quick-buttons"></div>
+        </div>
+
+        <form id="chat-form" class="chat-input" autocomplete="off">
+          <input
+            id="user-input"
+            type="text"
+            placeholder="输入你的反击..."
+            maxlength="120"
+            required
+          />
+          <button id="send-btn" type="submit">发送</button>
+        </form>
+      </section>
+    </main>
+
+    <script src="./app.js" defer></script>
+  </body>
+</html>
