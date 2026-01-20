@@ -152,10 +152,7 @@ const elements = {
   chatForm: document.querySelector("#chat-form"),
   userInput: document.querySelector("#user-input"),
   resetBtn: document.querySelector("#reset-chat"),
-  sendBtn: document.querySelector("#send-btn"),
-  bannerBtn: document.querySelector("#banner-btn"),
-  modal: document.querySelector("#wx-modal"),
-  modalClose: document.querySelector("#modal-close")
+  sendBtn: document.querySelector("#send-btn")
 };
 
 const formatTime = () => {
@@ -418,24 +415,6 @@ if (elements.resetBtn) {
   });
 }
 
-// Modal Logic
-if (elements.bannerBtn && elements.modal) {
-  elements.bannerBtn.addEventListener("click", () => {
-    elements.modal.classList.remove("hidden");
-  });
-
-  if (elements.modalClose) {
-    elements.modalClose.addEventListener("click", () => {
-      elements.modal.classList.add("hidden");
-    });
-  }
-
-  elements.modal.addEventListener("click", (e) => {
-    if (e.target === elements.modal) {
-      elements.modal.classList.add("hidden");
-    }
-  });
-}
 
 renderPersonaList();
 renderMessages();
